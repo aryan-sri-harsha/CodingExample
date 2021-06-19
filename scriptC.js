@@ -43,3 +43,24 @@ function clearing() {
   inpt.value = "";
   answer.innerHTML = " ";
 }
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 13) {
+    inpt.value = inpt.value.trim();
+    inpt.value = inpt.value.toLowerCase();
+    if (inpt.value==""){
+      answer.innerHTML ="Please enter a valid input"
+    }
+    else if (data[inpt.value] == undefined) {
+      answer.innerHTML = "No matching found";
+    } else {
+      answer.innerHTML = data[inpt.value] +
+      "<br>"+
+      "<br>"+
+      '<button class="btn btn-warning" onclick="copying()">Copy Code </button>';
+    }
+  }
+  if (event.keyCode == 27) {
+    inpt.value="";
+  answer.innerHTML=" ";
+  }
+});

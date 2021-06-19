@@ -40,6 +40,8 @@ const data = {
     "<p>n = {&quot;name&quot; : &quot;aryan&quot; , &quot;age&quot; : 18} # dictionary</p>" +
    " <p>a = (1,2,3) # tuples&nbsp;</p> "+
    "<p>b = {1,6,5,4} # set</p>",
+   "string functions":
+   "<p># Strings in python&nbsp;</p> <p>st = &quot;Harsha&quot;</p> <p>st.find(&quot;a&quot;) # finds first occurance of char and returns index</p> <p>st.rfind(&quot;a&quot;) # finds last occurance of char and returns index</p> <p>st.upper() # converts to upper case , we can also use lower( )</p> <p>st.replace(&quot;ars&quot;,&quot;qwe&quot;) # replace all ocurrances of ars in string to qwe.</p>"
 
 
 };
@@ -73,5 +75,26 @@ function clearing(){
   inpt.value="";
   answer.innerHTML=" ";
 }
-
+document.body.addEventListener("keydown", function(event) {
+  if (event.keyCode == 13) {
+    inpt.value = inpt.value.trim();
+    inpt.value = inpt.value.toLowerCase();
+    if (inpt.value==""){
+      answer.innerHTML ="Please enter a valid input"
+    }
+    else if (data[inpt.value] == undefined) {
+      answer.innerHTML = "No matching found";
+    } else {
+      answer.innerHTML = data[inpt.value] +
+      "<br>"+
+      "<br>"+
+      '<button class="btn btn-warning" onclick="copying()">Copy Code </button>';
+    }
+  }
+  if (event.keyCode == 27) {
+    inpt.value="";
+  answer.innerHTML=" ";
+  }
+  
+});
 
