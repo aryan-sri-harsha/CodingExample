@@ -3,12 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Example code snippets of python , C language" />
-    <meta name="keywords" content="Coding,Python,C,C Language,Code Example">
-    <meta name="google-site-verification" content="uWa5u0cFj-zSXjeJ4m7U5OgXlO1Zwqe0rhKNjqBszMY" />
-    <link rel = "icon" href = 
-"https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png" 
-        type = "image">
+    <meta
+      name="description"
+      content="Example code snippets of python , C language"
+    />
+    <meta name="keywords" content="Coding,Python,C,C Language,Code Example" />
+    <meta
+      name="google-site-verification"
+      content="uWa5u0cFj-zSXjeJ4m7U5OgXlO1Zwqe0rhKNjqBszMY"
+    />
+    <link
+      rel="icon"
+      href="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/267_Python-512.png"
+      type="image"
+    />
     <link href="styleA.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
@@ -16,43 +24,88 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
-    
+    <script
+      data-ad-client="ca-pub-5875947943570655"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
     <title>Code Example</title>
   </head>
   <body>
     <div class="container">
       <h1>Python</h1>
       <a href="cLang.html">
-      <button class="btn btn-primary">C </button>
-    </a>
+        <button class="btn btn-primary">C</button>
+      </a>
       <br />
       <div class="row">
-        
         <div class="col-sm-4">
-      <input list="coding"  type="text" class="form-control" style="width: 90%" id="input"/>
-    </div>   
-    <div class="col-sm-1">
-      <button class="btn btn-danger" id="myBtn" onclick="clearing()" >  clear</button>
-    </div>
-    </div>
-      <datalist id="coding">
-         <option value="for loop" ></option>   
-         <option value="while loop" ></option>   
-         <option value="conditionals" ></option>   
-         <option value="basic data types" ></option>   
-         <option value="Advanced data types" ></option>   
-         <option value="String functions" ></option>   
-      </datalist>
-      <br>
-      <br>
-      
-      <button class="btn btn-success" onclick="showing()">get example</button>
-      <br>
-      <br>
-      <br>
-      <div id="answer" >
-
+          <input
+            list="coding"
+            type="text"
+            class="form-control"
+            style="width: 90%"
+            id="input"
+          />
+        </div>
+        <div class="col-sm-1">
+          <button
+            class="btn btn-danger"
+            id="myBtn"
+            title="Esc"
+            onclick="clearing()"
+          >
+            clear
+          </button>
+        </div>
       </div>
+      <br />
+      <button class="btn btn-success" title="Enter" onclick="showing()">
+        get example
+      </button>
+      <br />
+      <br />
+      <div class="row">
+        <div class="col-sm-2">
+          <button class="btn btn-dark" onclick="pointers()">
+            Advanced Data types
+          </button>
+        </div>
+
+        <div class="col-sm-2">
+          <button class="btn btn-dark" onclick="string()">
+            string functions
+          </button>
+        </div>
+      </div>
+      <br />
+      <datalist id="coding">
+        <option value="for loop"></option>
+        <option value="while loop"></option>
+        <option value="conditionals"></option>
+        <option value="basic data types"></option>
+        <option value="Advanced data types"></option>
+        <option value="String functions"></option>
+        <option value="file handling"></option>
+        <option value="class"></option>
+        <option value="inheritance"></option>
+        <option value="magic methods"></option>
+        <option value="special methods"></option>
+      </datalist>
+      <br />
+      <br />
+      <br />
+      <div id="answer"></div>
+      <br />
+      <iframe
+        src="https://trinket.io/embed/python"
+        width="100%"
+        height="356"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+        allowfullscreen
+      ></iframe>
     </div>
     <script src="scriptPy.js"></script>
     <script

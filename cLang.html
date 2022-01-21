@@ -30,9 +30,24 @@
         <input list="coding"  type="text" class="form-control" style="width: 90%" id="input"/>
       </div>   
       <div class="col-sm-1">
-        <button class="btn btn-danger" id="myBtn" onclick="clearing()" >  clear</button>
+        <button class="btn btn-danger" title="Esc" id="myBtn" onclick="clearing()" >  clear</button>
       </div>
       </div>
+      <br>
+      <button class="btn btn-success" title="Enter" onclick="showing()">get example</button>
+      <br >
+      <br >
+      <div class="row">
+        <div class="col-sm-1">
+          <button class="btn btn-dark" onclick="pointers()">pointers</button>
+        </div>
+        
+        <div class="col-sm-2">
+          <button class="btn btn-dark" onclick="string()">string functions</button>
+        </div>
+      </div>
+      <br>
+     
         <datalist id="coding">
            <option value="for loop" ></option>   
            <option value="while loop" ></option>   
@@ -40,17 +55,18 @@
            <option value="basic data types" ></option>
            <option value="Advanced data types" ></option>
            <option value = "string functions"></option>      
+           <option value = "file handling"></option>      
         </datalist>
-        <br>
-        <br>
-        
-        <button class="btn btn-success" onclick="showing()">get example</button>
-        <br>
-        <br>
         <br>
         <div id="answer" >
   
         </div>
+        <!-- <iframe src="https://www.jdoodle.com/embed/v0/3pYe" width="100%"
+        height="356"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+        allowfullscreen></iframe> -->
       </div>
       <script src="scriptC.js"></script>
       <script

@@ -12,7 +12,11 @@ const data = {
   "<p>#include &lt;stdio.h&gt;</p> <p>int main (){</p> <p>int a = 10;</p> <p>float b = 10.214;</p> <p>char c = &apos;A&apos;;</p> <p>printf(&quot;%d %f %c&quot; , a,b,c); // specifiers&nbsp;</p> <p>return 0;</p> <p>}</p>"
   ,
   "advanced data types":
-  "<p>#include &lt;stdio.h&gt;</p> <p>void fnc(int a) {</p> <p>&nbsp; &nbsp; printf(&quot;%d&quot;,a*a);</p> <p>}</p> <p>int main (){</p> <p>int list[10] ={1,2,3,4,5,6,7,8,9,0}; // array</p> <p>int a = 10;</p> <p>int * p = &amp;a; // pointers &nbsp;can also be char and float</p> <p>int **q = &amp;p; // pointer to pointers</p> <p>void &nbsp;(*fnp)(int) = &amp;fnc; // function pointer</p> <p>return 0;</p> <p>}</p>"  
+  "<p>#include &lt;stdio.h&gt;</p> <p>void fnc(int a) {</p> <p>&nbsp; &nbsp; printf(&quot;%d&quot;,a*a);</p> <p>}</p> <p>int main (){</p> <p>int list[10] ={1,2,3,4,5,6,7,8,9,0}; // array</p> <p>int a = 10;</p> <p>int * p = &amp;a; // pointers &nbsp;can also be char and float</p> <p>int **q = &amp;p; // pointer to pointers</p> <p>void &nbsp;(*fnp)(int) = &amp;fnc; // function pointer</p> <p>return 0;</p> <p>}</p>"  ,
+  "string functions":
+  "<p>#include &lt;stdio.h&gt;</p> <p>#include&lt;string.h&gt;</p> <p>int main(){</p> <p>char a[10] = &quot;Harsha&quot;;</p> <p>char b[10] = &quot;Aryan1&quot;;</p> <p>int n = strlen(a);</p> <p>int comparision = strcmp(a,b); // compare 2 strings and return 0 if they are equal</p> <p>strcpy(a,b) ;// strcpy(destination, source)</p> <p>strcat(a,b); // adds string b to a but a need to be long enough ( a[&gt; length of a +&nbsp; b])</p> <p>}</p>",
+  "file handling":
+  "<p>#include&lt;stdio.h&gt;</p> <p><br></p> <p>int main(){</p> <p>&nbsp; &nbsp; FILE *fp = fopen(&quot;test.txt&quot;,&quot;r&quot;); // r means to read so your file should exist</p> <p>&nbsp; &nbsp; FILE *fp2 = fopen(&quot;test2.txt&quot;,&quot;w&quot;);// w means to write in the file&nbsp;</p> <p>&nbsp; &nbsp; if (fp == NULL){</p> <p>&nbsp; &nbsp; &nbsp; &nbsp;printf(&quot;no such file exists &quot;);</p> <p>&nbsp; &nbsp; }</p> <p>&nbsp; &nbsp; else{</p> <p>&nbsp; &nbsp; while(!feof(fp)){</p> <p>&nbsp; &nbsp; &nbsp; &nbsp;char c = fgetc(fp) ;</p> <p>&nbsp; &nbsp; &nbsp; &nbsp;if (feof(fp)) break ;</p> <p>&nbsp; &nbsp; &nbsp; &nbsp;printf(&quot;%c&quot;,c);</p> <p>&nbsp; &nbsp; &nbsp; } &nbsp; &nbsp;</p> <p>&nbsp; &nbsp; fclose(fp);&nbsp;</p> <p>&nbsp; &nbsp; char string[] = &quot;good bye&quot;;</p> <p>&nbsp; &nbsp; for (int i = 0; string[i]!=&apos;\0&apos;; i++)</p> <p>&nbsp; &nbsp; &nbsp; &nbsp; fputc(string[i], fp2); // we can use fprintf to write</p> <p>&nbsp; &nbsp; fclose(fp2);</p> <p>&nbsp; &nbsp;}</p> <p>}</p>"
 };
 function showing(e) {
   inpt.value = inpt.value.trim();
@@ -64,3 +68,9 @@ document.body.addEventListener("keydown", function(event) {
   answer.innerHTML=" ";
   }
 });
+function pointers(){
+  answer.innerHTML = data["advanced data types"] +'<button class="btn btn-warning" onclick="copying()">Copy Code </button>';
+}
+function string(){
+  answer.innerHTML = data["string functions"]+'<button class="btn btn-warning" onclick="copying()">Copy Code </button>'; 
+}
